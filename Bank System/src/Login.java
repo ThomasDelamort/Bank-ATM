@@ -1,11 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
 
-public class Login extends JFrame {
+public class Login extends JFrame implements ActionListener {
     JLabel lbl, userLbl, passLbl;
     JTextField userTxt, passTxt;
-    JButton logIn, clear;
+    JButton logIn, clear, signUp;
 
     public Login() {
         setTitle("BANK SYSTEM");
@@ -63,10 +65,25 @@ public class Login extends JFrame {
         clear.setBorder(null);
         add(clear);
 
+        signUp = new JButton("SIGN UP");
+        signUp.setBounds(260, 350, 250, 30);
+        signUp.setFont(new Font("Montserrat", Font.BOLD, 12));
+        signUp.setForeground(Color.white);
+        signUp.setBackground(Color.BLACK);
+        signUp.setFocusable(false);
+        signUp.setBorder(null);
+        add(signUp);
+
         setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // Action
     }
 
     static void main() {
         new Login();
     }
+
 }
