@@ -10,3 +10,5 @@ MYSQL steps
 
 ALSO Create a .env file
 within the .env file place your jdbc url, user and password.
+
+test.java is for generating values to insert within the database.
